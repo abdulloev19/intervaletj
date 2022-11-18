@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #004374;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    width: 600px;
+    height: 450px;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.content_header{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content_header img {
+    margin-bottom: 20px;
+}
+
+.content h3 {
+    text-align: center;
+    color: rgb(120, 109, 131)
+}
+
+.content form{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.name, .password {
+    width: 100%;
+    position: relative;
+}
+
+.content form a {
+    align-self: start;
+    text-decoration: none;
+    color: #807f8e;
+}
+
+.content form button {
+    width: 100%;
+    border-radius: 20px;
+    height: 35px;
+    border: none;
+    color: #fff;
+    background: linear-gradient(to right, rgb(63,107,122),rgb(49,69,89));
+}
+
+.container .content input{
+    width: calc(100% - 50px); 
+    height: 30px;
+    background-color: #f5f8f9;
+    border: none;
+    border-bottom: 1px solid rgb(33, 33, 100);
+    margin-left: 50px;
+    padding-left: 10px;
+    transition: 150ms cubic-bezier(0.4,0,0.2,1)
+}
+
+.container .content input:focus::placeholder{
+    opacity: 0;
+}
+
+.name > label, .password > label {
+    position: absolute;
+    top: -10px;
+    left: 60px;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+    opacity: 0;
+}
+
+.name > input:focus , .password > input:focus{
+    outline: none;
+}
+
+input:focus ~ label {
+    transform: translateY(-20%) scale(0.9);
+    color: #004374;
+    opacity: 1;
+    left: 55px;
+}
+
+.name > img , .password > img{
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+
+
+.content_bottom{
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-top: 1px solid #000; */
+
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Intervale interface</title>
+    <link rel="stylesheet" href="css/intervale.css" />
+  </head>
+  <body>
+    <div class="container" id="abdulloev">
+      <div class="content_header">
+        <div class="header_logo"><h3>Intervale</h3></div>
+        <div class="header_tell"><h3>+992926029988</h3></div>
+      </div>
+      <div class="content_main">
+        <div class="content_sidebar">
+          <nav>
+            <ul>
+              <li :class="{active: reports}" @click="reports = !reports; transactioncomp = false">
+                Отчеты
+              </li>
+              <li
+                id="dropdown"
+                :class="{active: payments}"
+                @click="payments = !payments"
+              >
+                Платежи
+              </li>
+              <div v-show="payments">
+                <li>Lorem</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum dolor.</li>
+              </div>
+              <li
+                id="dropdown"
+                :class="{active: perevod1}"
+                @click="perevod1 = !perevod1"
+              >
+                Переводы с карты на карту
+              </li>
+              <div v-show="perevod1">
+                <li>Lorem</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum dolor.</li>
+              </div>
+              <li
+                id="dropdown"
+                :class="{active: perevod2}"
+                @click="perevod2 = !perevod2"
+              >
+                Переводы с выдачей наличных
+              </li>
+              <div v-show="perevod2">
+                <li>Lorem</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum dolor.</li>
+              </div>
+              <li
+                id="dropdown"
+                :class="{active: perevod3}"
+                @click="perevod3 = !perevod3"
+              >
+                Переводы с карты на счет
+              </li>
+              <div v-show="perevod3">
+                <li>Lorem</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum dolor.</li>
+              </div>
+              <li
+                id="dropdown"
+                :class="{active: perevod4}"
+                @click="perevod4 = !perevod4"
+              >
+                Переводы со счета на карту
+              </li>
+              <div v-show="perevod4">
+                <li>Lorem</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum dolor.</li>
+              </div>
+              <li
+                id="dropdown"
+                :class="{active: alltranslations}"
+                @click="alltranslations = !alltranslations"
+              >
+                Все переводы
+              </li>
+              <div id="anime" v-show="alltranslations">
+                <li>Рабочий стол</li>
+                <li :class="{active: transactioncomp}" @click="transactioncomp = !transactioncomp; reports = false">Транзакции</li>
+                <li>Статистика</li>
+              </div>
+            </ul>
+          </nav>
+        </div>
+        <div class="content_home">
+            <reports-main></reports-main>
+            <transaction-main></transaction-main>
+        </div>
+      </div>
+    </div>
+    <script src="js/vue.global.prod.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
